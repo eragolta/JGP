@@ -12,18 +12,23 @@ window.jgpApp = angular.module('jgpApp',
         .state('about',
           url: '/about'
           templateUrl: '/templates/about'
-          controller: 'AboutCtrl'
+          # controller: 'AboutCtrl'
         )
         .state('employees',
           url: '/employees'
           templateUrl: '/templates/employees'
-          controller: 'EmployeesCtrl'
+          # controller: 'EmployeesCtrl'
         )
-        .state('services',
-          url: '/services'
-          templateUrl: '/templates/services'
-          controller: 'ServicesCtrl'
+        .state('fullprojects',
+          url: '/fullprojects'
+          templateUrl: '/templates/fullprojects'
+          # controller: 'FullprojectsCtrl'
         )
+        .state('localprojects
+          url: '/localprojects'
+          templateUrl: '/templates/localprojects'
+          # controller: 'LocalprojectsCtrl'
+          ')
       $locationProvider.html5Mode(true)
       $urlRouterProvider.otherwise('/home')
   ])
