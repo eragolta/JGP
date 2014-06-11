@@ -24,11 +24,16 @@ window.jgpApp = angular.module('jgpApp',
           templateUrl: '/templates/fullprojects'
           # controller: 'FullprojectsCtrl'
         )
-        .state('localprojects
+        .state('localprojects',
           url: '/localprojects'
           templateUrl: '/templates/localprojects'
           # controller: 'LocalprojectsCtrl'
-          ')
+        )
+        .state('contact',
+          url: '/contact'
+          templateUrl: '/templates/contact'
+          # controller: 'ContactCtrl'
+        )
       $locationProvider.html5Mode(true)
       $urlRouterProvider.otherwise('/home')
   ])

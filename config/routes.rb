@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'main/index'
+  
 
   root 'main#index'
 
@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
+  #   resources :products dmo
+
   #     member do
   #       get 'short'
   #       post 'toggle'
@@ -62,6 +63,9 @@ Rails.application.routes.draw do
   get '/home', to: 'main#index'
   get '/about', to: 'main#index'
   get '/employees', to: 'main#index'
-
+  get '/contact', to: 'main#index'
+  get '/fullprojects', to: 'main#index'
+  get '/localprojects', to: 'main#index'
+  get '/services', to: 'main#index'
 
 end
