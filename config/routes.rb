@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
 
   root 'main#index'
 
@@ -63,7 +63,7 @@ Rails.application.routes.draw do
   get '/home', to: 'main#index'
   get '/about', to: 'main#index'
   get '/employees', to: 'main#index'
-  get '/contact', to: 'main#index'
+  get '/locations', to: 'main#index'
   get '/fullprojects', to: 'main#index'
   get '/localprojects', to: 'main#index'
   get '/services', to: 'main#index'

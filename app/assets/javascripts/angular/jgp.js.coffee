@@ -1,4 +1,4 @@
-window.jgpApp = angular.module('jgpApp', 
+window.jgpApp = angular.module('jgpApp',
   ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap'])
   .config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
     ($stateProvider, $locationProvider, $urlRouterProvider) ->
@@ -29,10 +29,10 @@ window.jgpApp = angular.module('jgpApp',
           templateUrl: '/templates/localprojects'
           # controller: 'LocalprojectsCtrl'
         )
-        .state('contact',
-          url: '/contact'
-          templateUrl: '/templates/contact'
-          # controller: 'ContactCtrl'
+        .state('locations',
+          url: '/locations'
+          templateUrl: '/templates/locations'
+          controller: 'LocationsCtrl'
         )
       $locationProvider.html5Mode(true)
       $urlRouterProvider.otherwise('/home')
