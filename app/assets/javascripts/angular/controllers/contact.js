@@ -1,16 +1,20 @@
 var ContactModalCtrl = angular.module('jgpApp')
   .controller('ContactModalCtrl', ['$scope', '$modal', function ($scope, $modal) {
 
-  $scope.items = ['item1', 'item2', 'item3'];
-
   $scope.open = function () {
 
     var modalInstance = $modal.open({
       templateUrl: 'templates/contactModal.html',
       controller: ['$scope', '$modalInstance', function($scope, $modalInstance) {
 
+        $scope.contact = {
+          email: '',
+          message: '',
+          currentDate: null
+        };
         $scope.send = function () {
-          $modalInstance.close('$scope.selected.item');
+          $scope.contact.currentDate = new Date();
+          $modalInstance.close($scope.contact);
         };
 
         $scope.cancel = function () {
