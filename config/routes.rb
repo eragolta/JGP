@@ -64,8 +64,9 @@ Rails.application.routes.draw do
   get '/about', to: 'main#index'
   get '/employees', to: 'main#index'
   get '/locations', to: 'main#index'
-  get '/fullprojects', to: 'main#index'
-  get '/localprojects', to: 'main#index'
+  get '/projects', to: 'main#index'
+  get '/projects/all', to: 'main#index'
+  get '/projects/local', to: 'main#index'
   get '/services', to: 'main#index'
 
 end

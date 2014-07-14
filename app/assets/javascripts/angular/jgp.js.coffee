@@ -19,14 +19,19 @@ window.jgpApp = angular.module('jgpApp',
           templateUrl: '/templates/employees'
           # controller: 'EmployeesCtrl'
         )
-        .state('fullprojects',
-          url: '/fullprojects'
-          templateUrl: '/templates/fullprojects'
+        .state('projects',
+          abstract: true
+          url: '/projects'
+          templateUrl: '/templates/projects'
+        )
+        .state('projects.all',
+          url: '/all'
+          templateUrl: '/templates/projects.full'
           # controller: 'FullprojectsCtrl'
         )
-        .state('localprojects',
-          url: '/localprojects'
-          templateUrl: '/templates/localprojects'
+        .state('projects.local',
+          url: '/local'
+          templateUrl: '/templates/projects.local'
           # controller: 'LocalprojectsCtrl'
         )
         .state('locations',
